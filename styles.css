@@ -903,30 +903,33 @@ a{color:inherit}
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: #25d366;
+  background: transparent;
   cursor: pointer;
-  box-shadow: 0 10px 32px rgba(0,0,0,.38);
+  box-shadow: none;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
   display: grid;
   place-items: center;
   overflow: hidden;
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform .15s ease, filter .15s ease;
 }
 .wa-float:hover{
   transform: scale(1.06);
-  box-shadow: 0 12px 36px rgba(0,0,0,.45);
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.42));
 }
 .wa-float:focus-visible{
   outline: 2px solid var(--a);
   outline-offset: 3px;
 }
 .wa-float img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   display: block;
 }
 .wa-float__fallback{
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1;
 }
 .wa-popup{
