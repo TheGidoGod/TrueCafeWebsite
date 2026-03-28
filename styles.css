@@ -403,6 +403,52 @@ a{color:inherit}
   line-height:1.6;
 }
 
+/* Legal pages (privacy policy, etc.) */
+.legal{
+  max-width: 720px;
+  margin-inline: auto;
+}
+.legal .section__title{
+  margin-bottom: 12px;
+}
+.legal > .section__sub{
+  margin-bottom: 2rem;
+}
+.legal__body h2{
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-weight: 720;
+  letter-spacing: -.02em;
+  margin: 2rem 0 0.65rem;
+  color: var(--text);
+}
+.legal__body h2:first-child{
+  margin-top: 0;
+}
+.legal__body p,
+.legal__body li{
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15px;
+}
+.legal__body ul{
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+}
+.legal__body li{
+  margin: 0.4rem 0;
+}
+.legal__body code{
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  background: rgba(245,240,232,.08);
+  border: 1px solid var(--line);
+}
+body.light .legal__body code{
+  background: rgba(0,0,0,.06);
+}
+
 /* Chips */
 .chips{display:flex; gap:10px; flex-wrap:wrap}
 .chip{
