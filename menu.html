@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu | Brew & Bloom</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Manrope:wght@300..800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="topbar" data-elevate>
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">B</span>
+      <span class="brand__text">Brew &amp; Bloom</span>
+    </a>
+
+    <nav class="nav">
+      <button class="nav__toggle" type="button">
+        <span class="nav__toggleLines"></span>
+      </button>
+      <button id="themeToggle" class="btn btn--ghost">🌙</button>
+      <div class="nav__menu" id="navMenu">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="menu.html">Menu</a>
+        <a class="nav__link" href="story.html">Story</a>
+        <a class="nav__link" href="gallery.html">Gallery</a>
+        <a class="nav__link" href="reserve.html">Visit</a>
+        <a class="nav__cta" href="reserve.html">Reserve</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- MENU SECTION -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Menu</p>
+          <h2 class="section__title">Made to match your day</h2>
+          <p class="section__sub">
+            Everything is crafted with local ingredients and a little extra patience.
+          </p>
+        </div>
+
+        <div class="chips">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="coffee">Coffee</button>
+          <button class="chip" data-filter="tea">Tea</button>
+          <button class="chip" data-filter="pastry">Pastries</button>
+          <button class="chip" data-filter="brunch">Brunch</button>
+        </div>
+      </div>
+
+      <div class="menuGrid" id="menuGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    
+    <!-- Left: Brand -->
+    <div class="footer__left">
+      <a class="brand brand--footer" href="#home">
+        <span class="brand__mark" aria-hidden="true">B</span>
+        <span class="brand__text">Brew &amp; Bloom</span>
+      </a>
+      <p class="footer__tagline">Coffee, pastries, and a little calm.</p>
+    </div>
+
+    <!-- Middle: Navigation -->
+    <div class="footer__middle">
+      <h4 class="footer__title">Explore</h4>
+      <a class="link" href="menu.html">Menu</a>
+      <br>
+      <br>
+      <a class="link" href="reserve.html">Visit</a>
+      <br>
+      <br>
+      <a class="link" href="reserve.html">Reserve</a>
+      <br>
+      <br>
+      <a class="link" href="story.html">About</a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer__contact">
+      <h4 class="footer__title">Contact</h4>
+      <p>📍 123 Coffee Lane, Your City</p>
+      <p>📞 +91 98765 43210</p>
+      <p>✉️ hello@brewandbloom.com</p>
+    </div>
+
+    <!-- Opening Hours -->
+    <div class="footer__hours">
+      <h4 class="footer__title">Hours</h4>
+      <p>Mon–Fri: 8 AM – 8 PM</p>
+      <p>Sat–Sun: 9 AM – 10 PM</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer__newsletter">
+      <h4 class="footer__title">Stay Updated</h4>
+      <p>Get offers & updates in your inbox.</p>
+      <form class="newsletter">
+        <input type="email" class="nav__cta" placeholder="Your email" required>
+        <button class="nav__cta" type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="container footer__bottom">
+    <div class="footer__bottom-left">
+      <p>© <span id="year"></span> Brew &amp; Bloom. Built with HTML, CSS &amp; JS.</p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer__social">
+      <a href="#" class="link" aria-label="Instagram">Instagram</a>
+      <a href="#" class="link" aria-label="Facebook">Facebook</a>
+      <a href="#" class="link" aria-label="Twitter">Twitter</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

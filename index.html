@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Brew & Bloom — a cozy neighborhood cafe for espresso, pastries, and brunch."
+    />
+    <title>Brew & Bloom Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Manrope:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" data-elevate>
+      <div class="container topbar__inner">
+        <a class="brand" href="#home" aria-label="Brew & Bloom home">
+          <span class="brand__mark" aria-hidden="true">B</span>
+          <span class="brand__text">Brew &amp; Bloom</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false">
+            <span class="nav__toggleLines"></span>
+          </button>
+          <button id="themeToggle" class="btn btn--ghost" type="button" aria-label="Switch theme">🌙</button>
+          <div class="nav__menu" id="navMenu">
+            <a class="nav__link" href="index.html">Home</a>
+            <a class="nav__link" href="menu.html">Menu</a>
+            <a class="nav__link" href="story.html">Story</a>
+            <a class="nav__link" href="gallery.html">Gallery</a>
+            <a class="nav__link" href="reserve.html">Visit</a>
+            <a class="nav__cta" href="reserve.html">Reserve</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow reveal">Neighborhood cafe • Espresso • Pastry</p>
+            <h1 class="hero__title reveal">
+              Morning ritual,
+              <span class="hero__titleAccent">blooming</span>
+              flavors.
+            </h1>
+            <p class="hero__lead reveal">
+              Small-batch coffee, seasonal bakes, and brunch classics served in a warm space with
+              sunlight and vinyl.
+            </p>
+
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="menu.html">Explore the menu</a>
+              <a class="btn btn--ghost" href="reserve.html">Book a table</a>
+            </div>
+
+            <div class="hero__stats reveal" role="list">
+              <div class="stat" role="listitem">
+                <span class="stat__kpi">7:00</span>
+                <span class="stat__label">Open daily</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat__kpi">12+</span>
+                <span class="stat__label">Seasonal drinks</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat__kpi">Fresh</span>
+                <span class="stat__label">Baked every morning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__media" aria-label="Featured items">
+            <div class="heroCard heroCard--tall reveal">
+              <div class="heroCard__img" data-image="latte-art"></div>
+              <div class="heroCard__meta">
+                <p class="heroCard__title">House Oat Latte</p>
+                <p class="heroCard__sub">Brown sugar • cinnamon • silky</p>
+              </div>
+            </div>
+            <div class="heroCard heroCard--wide reveal">
+              <div class="heroCard__img" data-image="pastry"></div>
+              <div class="heroCard__meta">
+                <p class="heroCard__title">Butter Croissant</p>
+                <p class="heroCard__sub">Flaky layers • warm jam</p>
+              </div>
+            </div>
+            <div class="heroCard heroCard--small reveal">
+              <div class="heroCard__img" data-image="brunch"></div>
+              <div class="heroCard__meta">
+                <p class="heroCard__title">Avocado Toast</p>
+                <p class="heroCard__sub">Chili • lemon • herbs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__glow" aria-hidden="true"></div>
+      </section>
+
+      <section class="section" id="menu">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow reveal">Menu</p>
+              <h2 class="section__title reveal">Made to match your day</h2>
+              <p class="section__sub reveal">
+                Tap a category to filter. Everything is crafted with local ingredients and a little
+                extra patience.
+              </p>
+            </div>
+
+          <div class="menuGrid reveal" id="menuGrid" aria-live="polite"></div>
+          <br>
+          <a class="nav__cta" href="menu.html">View All Items</a>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="story">
+        <div class="container story">
+          <div class="story__media reveal" aria-label="Cafe ambience photo">
+            <div class="story__img" data-image="interior"></div>
+            <div class="story__badge">
+              <p class="story__badgeTitle">Roasted weekly</p>
+              <p class="story__badgeSub">Single-origin + blends</p>
+            </div>
+          </div>
+          <div class="story__copy">
+            <p class="eyebrow reveal">Our story</p>
+            <h2 class="section__title reveal">A small room, big comfort</h2>
+            <p class="reveal">
+              Brew &amp; Bloom started as a tiny espresso bar with two stools and one very loud
+              grinder. Today we’re still obsessed with the details: dialed-in shots, bright teas,
+              and pastry that tastes like it was made for your walk here.
+            </p>
+            <ul class="ticks reveal">
+              <li>Plant-forward options, always.</li>
+              <li>Gluten-free treats available daily.</li>
+              <li>Free Wi‑Fi, plenty of outlets, no rush.</li>
+            </ul>
+            <div class="story__actions reveal">
+              <a class="btn btn--primary" href="story.html">View full story</a>
+              <a class="btn btn--ghost" href="gallery.html">See the space</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow reveal">Gallery</p>
+              <h2 class="section__title reveal">Soft light, warm plates</h2>
+            </div>
+          </div>
+
+          <div class="gallery reveal" id="galleryPreview" aria-label="Gallery preview (opens full gallery)"></div>
+          <br>
+          <a class="nav__cta" href="gallery.html">View the entire gallery</a>
+        </div>
+      </section>
+
+      
+    </main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    
+    <!-- Left: Brand -->
+    <div class="footer__left">
+      <a class="brand brand--footer" href="#home">
+        <span class="brand__mark" aria-hidden="true">B</span>
+        <span class="brand__text">Brew &amp; Bloom</span>
+      </a>
+      <p class="footer__tagline">Coffee, pastries, and a little calm.</p>
+    </div>
+
+    <!-- Middle: Navigation -->
+    <div class="footer__middle">
+      <h4 class="footer__title">Explore</h4>
+      <a class="link" href="menu.html">Menu</a>
+      <br>
+      <br>
+      <a class="link" href="reserve.html">Visit</a>
+      <br>
+      <br>
+      <a class="link" href="reserve.html">Reserve</a>
+      <br>
+      <br>
+      <a class="link" href="story.html">About</a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer__contact">
+      <h4 class="footer__title">Contact</h4>
+      <p>📍 123 Coffee Lane, Your City</p>
+      <p>📞 +91 98765 43210</p>
+      <p>✉️ hello@brewandbloom.com</p>
+    </div>
+
+    <!-- Opening Hours -->
+    <div class="footer__hours">
+      <h4 class="footer__title">Hours</h4>
+      <p>Mon–Fri: 8 AM – 8 PM</p>
+      <p>Sat–Sun: 9 AM – 10 PM</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer__newsletter">
+      <h4 class="footer__title">Stay Updated</h4>
+      <p>Get offers & updates in your inbox.</p>
+      <form class="newsletter">
+        <input type="email" class="nav__cta" placeholder="Your email" required>
+        <button class="nav__cta" type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="container footer__bottom">
+    <div class="footer__bottom-left">
+      <p>© <span id="year"></span> Brew &amp; Bloom. Built with HTML, CSS &amp; JS.</p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer__social">
+      <a href="#" class="link" aria-label="Instagram">Instagram</a>
+      <a href="#" class="link" aria-label="Facebook">Facebook</a>
+      <a href="#" class="link" aria-label="Twitter">Twitter</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
