@@ -745,7 +745,7 @@ function setupWhatsAppFloat() {
   root.id = "waFloatRoot";
   root.innerHTML = `
     <button type="button" class="wa-float" id="waFloatBtn" aria-label="WhatsApp us" aria-expanded="false" aria-controls="waPopup">
-      <img src="img/whatapp.png" alt="" width="56" height="56" decoding="async" />
+      <img src="img/whatapp.png" alt="" width="40" height="40" decoding="async" />
       <span class="wa-float__fallback" hidden aria-hidden="true">💬</span>
     </button>
     <div class="wa-popup" id="waPopup" role="dialog" aria-modal="true" aria-labelledby="waPopupTitle" hidden>
