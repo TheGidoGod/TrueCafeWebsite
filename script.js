@@ -734,6 +734,71 @@ function setupSmoothCloseOnHash() {
   });
 }
 
+/** E.164-style digits only (country code + number, no + or spaces) for https://wa.me/ */
+const WHATSAPP_WA_ME = "919876543210";
+const WHATSAPP_DISPLAY = "+91 98765 43210";
+
+function setupWhatsAppFloat() {
+  if ($("#waFloatRoot")) return;
+
+  const root = document.createElement("div");
+  root.id = "waFloatRoot";
+  root.innerHTML = `
+    <button type="button" class="wa-float" id="waFloatBtn" aria-label="WhatsApp us" aria-expanded="false" aria-controls="waPopup">
+      <img src="img/whatapp.png" alt="" width="56" height="56" decoding="async" />
+      <span class="wa-float__fallback" hidden aria-hidden="true">💬</span>
+    </button>
+    <div class="wa-popup" id="waPopup" role="dialog" aria-modal="true" aria-labelledby="waPopupTitle" hidden>
+      <div class="wa-popup__backdrop" data-wa-close></div>
+      <div class="wa-popup__panel">
+        <button type="button" class="wa-popup__close" data-wa-close aria-label="Close">×</button>
+        <h2 id="waPopupTitle" class="wa-popup__title">Chat on WhatsApp</h2>
+        <p class="wa-popup__label">Reach us at</p>
+        <p class="wa-popup__num">${WHATSAPP_DISPLAY}</p>
+        <a class="btn btn--primary wa-popup__cta" href="https://wa.me/${WHATSAPP_WA_ME}" target="_blank" rel="noopener noreferrer">Continue to WhatsApp</a>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(root);
+
+  const btn = $("#waFloatBtn", root);
+  const popup = $("#waPopup", root);
+  const floatImg = root.querySelector(".wa-float img");
+  const fallback = root.querySelector(".wa-float__fallback");
+
+  floatImg?.addEventListener("error", () => {
+    floatImg.style.display = "none";
+    if (fallback) fallback.hidden = false;
+  });
+
+  const openWa = () => {
+    popup.hidden = false;
+    popup.classList.add("is-open");
+    btn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeWa = () => {
+    popup.classList.remove("is-open");
+    popup.hidden = true;
+    btn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  };
+
+  btn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    openWa();
+  });
+
+  popup?.addEventListener("click", (e) => {
+    if (e.target.closest("[data-wa-close]")) closeWa();
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && popup?.classList.contains("is-open")) closeWa();
+  });
+}
+
 function init() {
   const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
 
@@ -764,6 +829,7 @@ function init() {
   setupYear();
   setMinDate();
   setupSmoothCloseOnHash();
+  setupWhatsAppFloat();
 }
 
 document.addEventListener("DOMContentLoaded", init);
