@@ -452,9 +452,9 @@ body.light .legal__body code{
 /* Chips */
 .chips{display:flex; gap:10px; flex-wrap:wrap}
 .chip{
-  border:1px solid rgba(245,240,232,.10);
+  border:1px solid var(--line-soft);
   background: var(--glass);
-  color: rgba(245,240,232,.86);
+  color: var(--text-mid);
   border-radius: 999px;
   padding: 10px 12px;
   font-weight: 750;
@@ -462,11 +462,15 @@ body.light .legal__body code{
   cursor:pointer;
   transition: transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
 }
-.chip:hover{transform: translateY(-1px); border-color: var(--sec)}
+.chip:hover{
+  transform: translateY(-1px);
+  border-color: var(--sec);
+  color: var(--text-strong);
+}
 .chip.is-active{
   border-color: rgba(255,207,132,.42);
   background: rgba(255,207,132,.16);
-  color: rgba(255,207,132,.96);
+  color: var(--a);
 }
 
 /* Menu grid */
